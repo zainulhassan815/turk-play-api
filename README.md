@@ -13,7 +13,7 @@ An api to access ninja tv database. Built for `Ninja Tv Android App` which you c
     PASSWORD=""
     DB_HOST="localhost"
     DB_PORT="3306"
-    DATABASE="ninja"
+    DATABASE="turk_play"
     ```
 
 - Run the following command to start a dev server.
