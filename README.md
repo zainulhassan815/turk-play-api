@@ -1,5 +1,5 @@
 # Ninja Tv Api
-An api to access ninja tv database. Built for `Turk Play Android App`.
+An api to access turk_play tv database. Built for `Turk Play Android App`.
 
 ## Getting Started
 
