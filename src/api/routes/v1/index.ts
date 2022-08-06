@@ -6,12 +6,12 @@ import featuredRouter from './featured.route';
 const router = Router();
 
 router.get('/status', async (req, res) => {
-	res.json({
-		message: 'OK',
-		timestamp: new Date().toISOString(),
-		IP: req.ip,
-		URL: req.originalUrl,
-	});
+  res.json({
+    message: 'OK',
+    timestamp: new Date().toISOString(),
+    IP: req.ip,
+    URL: req.originalUrl,
+  });
 });
 
 router.use('/dramas', dramasRouter);

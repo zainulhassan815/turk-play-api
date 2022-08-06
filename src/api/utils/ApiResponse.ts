@@ -1,22 +1,22 @@
 interface BaseResponse {
-	status: number;
+  status: number;
 }
 
 interface SuccessResponse<T> extends BaseResponse {
-	data: T;
+  data: T;
 }
 
 interface PaginatedReponse<T> extends SuccessResponse<T> {
-	totlePages: number;
-	totalRows: number;
-	perPage: number;
-	previousPage?: number;
-	currentPage: number;
-	nextPage?: number;
+  totlePages: number;
+  totalRows: number;
+  perPage: number;
+  previousPage?: number;
+  currentPage: number;
+  nextPage?: number;
 }
 
 interface ErrorResponse extends BaseResponse {
-	message: string;
+  message: string;
 }
 
 export { BaseResponse, SuccessResponse, PaginatedReponse, ErrorResponse };
