@@ -1,6 +1,7 @@
 import { ErrorRequestHandler } from 'express';
 import httpStatus from 'http-status';
 import { ConnectionError, DatabaseError, QueryError, ValidationError } from 'sequelize';
+import logger from '../../config/logger.config';
 import { ErrorResponse } from '../utils/ApiResponse';
 
 // Disable eslint for 'next' function as it is required for proper working of middleware.
@@ -34,6 +35,7 @@ const handler: ErrorRequestHandler = (err, _req, res, next) => {
       message: 'Unknown error.',
     };
   }
+  logger.error(err);
   res.status(response.status).json(response);
 };
 

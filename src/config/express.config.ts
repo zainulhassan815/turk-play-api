@@ -1,11 +1,16 @@
 import compression from 'compression';
 import express from 'express';
 import helmet from 'helmet';
+import morgan from 'morgan';
 import { handleApiParams } from '../api/middlewares/apiParams';
 import { handler } from '../api/middlewares/error';
 import v1Router from '../api/routes/v1';
 
 const app = express();
+
+const production = process.env.NODE_ENV === 'production';
+const format = production ? 'combined' : 'dev';
+app.use(morgan(format));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
