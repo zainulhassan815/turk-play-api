@@ -2,7 +2,7 @@ import compression from 'compression';
 import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { handleApiParams } from '../api/middlewares/apiParams';
+import { handleApiParams } from '../api/middlewares/apiparams';
 import { handler } from '../api/middlewares/error';
 import v1Router from '../api/routes/v1';
 
