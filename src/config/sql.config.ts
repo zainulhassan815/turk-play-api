@@ -8,11 +8,8 @@ interface SqlConfig {
   database: string;
 }
 
-const production = process.env.NODE_ENV === 'production' ?? false;
-if (!production) {
-  // load environment variables from .env file at startup.
-  dotenv.config();
-}
+// load environment variables from .env file at startup.
+dotenv.config();
 
 const DefaultDbConfig: SqlConfig = {
   user: process.env.USER,
@@ -22,9 +19,6 @@ const DefaultDbConfig: SqlConfig = {
   database: process.env.DATABASE,
 };
 
-if (!production) {
-  console.log('Running in development mode.');
-  console.log('Default SQL configuration:', DefaultDbConfig);
-}
+console.log('Default SQL configuration:', DefaultDbConfig);
 
 export default DefaultDbConfig;
