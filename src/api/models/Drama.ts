@@ -27,7 +27,7 @@ Drama.init(
   },
   {
     sequelize: sequelize,
-    tableName: 'Drama',
+    tableName: 'drama',
   }
 );
 

@@ -41,7 +41,7 @@ Episode.init(
   },
   {
     sequelize: sequelize,
-    tableName: 'Episode',
+    tableName: 'episode',
   }
 );
 
